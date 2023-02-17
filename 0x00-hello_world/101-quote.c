@@ -2,7 +2,7 @@
 #include <unistd.h>
 /**
  * main - Entry point
- * 
+ *
  * Description: "error message printed"
  *
  * Return: 1 (fail)
