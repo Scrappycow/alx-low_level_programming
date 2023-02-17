@@ -10,7 +10,7 @@
 
 int main(void)
 {
-	int firstDig = o, secDig;
+	int firstDig = 0, secDig;
 
 	while (firstDig <= 99)
 	{
