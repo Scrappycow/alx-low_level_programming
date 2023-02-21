@@ -7,26 +7,33 @@
 
 void times_table(void)
 {
-	int yet, cet, d;
+	int pet, cet, d;
 
-	for (yet = 0; yet <= 9; yet++)
+	for (pet = 0; pet <= 9; pet++)
 	{
 		_putchar('0');
-		for (cet = 0; cet <= 9 ; cet++)
+		_putchar(',');
+		_putchar(' ');
+		for (cet = 1; cet <= 9; cet++)
 		{
-			_putchar(',');
-			_putchar(' ');
-
-			d = (yet * cet);
-
-			if (d <= 9)
-				_putchar(' ');
-			else
+			d = (pet * cet);
+			if ((d / 10) > 0)
+			{
 				_putchar((d / 10) + '0');
+			}
+			else
+			{
+				_putchar(' ');
+			}
+			_putchar((d % 10) + '0');
 
-			_putchar((prod % 10) + '0');
+			if (cet  < 9)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
 		}
 		_putchar('\n');
 	}
-}
 
+}
