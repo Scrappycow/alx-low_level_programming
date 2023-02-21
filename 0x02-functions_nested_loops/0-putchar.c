@@ -2,7 +2,7 @@
 
 /**
  * main -Entry point and print _putchar
- *
+ * is written by cat
  * Return: 0 (Success)
  */
 
