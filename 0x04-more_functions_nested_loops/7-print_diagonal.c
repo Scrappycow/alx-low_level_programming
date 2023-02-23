@@ -1,5 +1,13 @@
 #include "main.h"
 
+/**
+ * print_diagonal - prints a diagonal
+ * Description: prints a diagonal
+ * @n: number of times the character \ is to be printed
+ *
+ * Return: void
+ */
+
 void print_diagonal(int n);
 
 /**
@@ -7,7 +15,7 @@ void print_diagonal(int n);
  * Description: prints a diagonal
  * @n: number of times the character \ is to be printed
  *
- * Return: Always 0.
+ * Return: void
  */
 void print_diagonal(int n)
 {
