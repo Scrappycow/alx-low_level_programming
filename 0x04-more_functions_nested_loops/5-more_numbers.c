@@ -2,7 +2,7 @@
 
 void more_numbers(void);
 /**
- * print_numbers - prints the numbers 0 to 14, ten times
+ * more_numbers - prints the numbers 0 to 14, ten times
  * Description: prints 0 to 14, ten times
  * Return: void
  */
@@ -10,9 +10,9 @@ void more_numbers(void);
 void more_numbers(void)
 {
 	int ch;
-	int i = 0;
+	int i;
 
-	while (i < 10)
+	for (i = 0; i <= 9; i++)
 	{
 		for (ch = 0; ch <= 14; ch++)
 		{
@@ -23,6 +23,5 @@ void more_numbers(void)
 			_putchar(ch % 10 + '0');
 		}
 		_putchar('\n');
-		i++
 	}
 }
