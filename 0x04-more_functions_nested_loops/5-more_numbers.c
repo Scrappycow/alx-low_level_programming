@@ -7,14 +7,14 @@ void more_numbers(void);
  * Return: void
  */
 
-void print_numbers(void)
+void more_numbers(void)
 {
-	char ch;
+	int ch;
 	int i = 0;
 
 	while (i < 10)
 	{
-		for (ch = '0'; ch <= '14'; ch++)
+		for (ch = 0; ch <= 14; ch++)
 		{
 			if (ch > 9)
 			{
