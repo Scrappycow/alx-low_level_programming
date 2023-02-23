@@ -30,7 +30,7 @@ void print_diagonal(int n)
 	{
 		for (fs = 0; fs < n; fs++)
 		{
-			for (sp = 0; sp < n; sp++)
+			for (sp = 0; sp < fs; sp++)
 			{
 				_putchar(' ');
 			}

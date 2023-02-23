@@ -34,7 +34,7 @@ void print_triangle(int size)
 			{
 				_putchar(' ');
 			}
-			for (ha  = 0; ha < ra; ha++)
+			for (hs  = 0; hs < ra; hs++)
 			{
 				_putchar('#');
 			}
