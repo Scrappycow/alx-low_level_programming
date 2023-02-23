@@ -29,9 +29,9 @@ void print_number(int n)
 		new_num = n;
 	}
 
-	if ( new_num / 10)
+	if (new_num / 10)
 	{
-		print_number (new_num / 10);
+		print_number(new_num / 10);
 	}
 	_putchar((new_num % 10) + '0');
 }
