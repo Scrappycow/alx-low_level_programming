@@ -1,4 +1,5 @@
-#include "main.h"
+#include <stdio.h>
+#include <math.h>
 /**
  * main - Entry point
  * Description: Fizz (x3), Buzz(x5), FizzBuzz(in x3 & x5)
@@ -14,40 +15,27 @@ int main(void)
 	{
 		if (i % 3 == 0 && i % 5 != 0)
 		{
-			_putchar('F');
-			_putchar('i');
-			_putchar('z');
-			_putchar('z');
-			_putchar(' ');
+			printf("%s", "Fizz");
+			putchar(' ');
 		}
 		else if (i % 5 == 0 && i % 3 != 0)
 		{
-			_putchar('B');
-			_putchar('u');
-			_putchar('z');
-			_putchar('z');
-			_putchar(' ');
+			printf("%s", "Buzz");
+			putchar(' ');
 		}
 		else if (i % 5 == 0 && i % 3 == 0)
 		{
-			_putchar('F');
-			_putchar('i');
-			_putchar('z');
-			_putchar('z');
-			_putchar('B');
-			_putchar('u');
-			_putchar('z');
-			_putchar('z');
-			_putchar(' ');
+			printf("%s", "FizzBuzz");
+			putchar(' ');
 		}
 		else
 		{
 			if (i > 9 && i <= 99)
 			{
-				_putchar(i / 10 + '0');
+				putchar(i / 10 + '0');
 			}
-			_putchar(i % 10 + '0');
-			_putchar(' ');
+			putchar(i % 10 + '0');
+			putchar(' ');
 		}
 	}
 	return (0);
