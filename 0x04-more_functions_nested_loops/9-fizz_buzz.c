@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <math.h>
+
 /**
- * main - Entry point
- * Description: Fizz (x3), Buzz(x5), FizzBuzz(in x3 & x5)
+ * main - Entry point and prints strings and integers
+ * Description: prints Fizz (x3), prints Buzz(x5), prints FizzBuzz(in x3 & x5)
  * Return: Always 0.
  */
 int main(void)
