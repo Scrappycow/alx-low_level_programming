@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
  * primeFactors - finds the largest prime factor
@@ -30,7 +31,6 @@ int main(void)
 
 void primeFactors(long long pn)
 {
-	long long pn;
 	long long factor = 2;
 	long long largest_factor = 0;
 
