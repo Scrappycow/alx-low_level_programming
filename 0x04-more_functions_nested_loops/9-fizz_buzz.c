@@ -4,7 +4,7 @@
 /**
  * main - Entry point and prints strings and integers
  * Description: prints Fizz (x3), prints Buzz(x5), prints FizzBuzz(in x3 & x5)
- * Return: void
+ * Return: 0
  */
 int main(void)
 {
@@ -16,18 +16,15 @@ int main(void)
 	{
 		if (i % 3 == 0 && i % 5 != 0)
 		{
-			printf("%s", "Fizz");
-			putchar(' ');
+			printf("%s", "Fizz ");
 		}
 		else if (i % 5 == 0 && i % 3 != 0)
 		{
-			printf("%s", "Buzz");
-			putchar(' ');
+			printf("%s", "Buzz ");
 		}
 		else if (i % 5 == 0 && i % 3 == 0)
 		{
-			printf("%s", "FizzBuzz");
-			putchar(' ');
+			printf("%s", "FizzBuzz ");
 		}
 		else
 		{
@@ -40,4 +37,5 @@ int main(void)
 		}
 	}
 	putchar('\n');
+	return (0);
 }
