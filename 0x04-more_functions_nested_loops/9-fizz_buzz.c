@@ -4,7 +4,7 @@
 /**
  * main - Entry point and prints strings and integers
  * Description: prints Fizz (x3), prints Buzz(x5), prints FizzBuzz(in x3 & x5)
- * Return: Always 0.
+ * Return: void
  */
 int main(void)
 {
@@ -40,5 +40,4 @@ int main(void)
 		}
 	}
 	putchar('\n');
-	return (0);
 }
