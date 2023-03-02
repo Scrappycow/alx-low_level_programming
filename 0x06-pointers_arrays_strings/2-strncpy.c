@@ -5,17 +5,23 @@
  * @dest: destination of the string
  * @src: string to be copies
  * @n: number of bytes used
- * Return: Always 0.
+ * Return: dest
  */
 
 char *_strncpy(char *dest, char *src, int n)
 {
 	int i;
 
-	for (i = 0; i < n && src[i] != '\0'; i++)
+	i = 0;
+	for (i < n && src[i] != '\0')
+	{
 		dest[i] = src[i];
+		i++;
+	}
 	for ( ; i < n; i++)
+	{
 		dest[i] = '\0';
+	}
 
 	return (dest);
 }
