@@ -2,24 +2,24 @@
 
 /**
  * leet - function that encodes a string into 1337
- * @n: input value
+ * @t: input value
  *
  * Return: n value
  */
 
-char *leet(char *n);
+char *leet(char *t);
 {
 	int i, j;
-	char d[] = "aAeEoOtTlL";
-	char g[] = "4433007711";
+	char *d[] = "aAeEoOtTlL";
+	char *g[] = "4433007711";
 
-	for (i = 0; *(n + i); i++)
+	for (i = 0; *(t + i); i++)
 	{
 		for (j = 0; j < 10; j++)
 		{
-			if (d[j] == n[i])
-				n[i] = g[j];
+			if (d[j] == t[i])
+				t[i] = g[j];
 		}
 	}
-	return (n);
+	return (t);
 }
