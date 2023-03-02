@@ -18,9 +18,7 @@ char *leet(char *n);
 		for (j = 0; j < 10; j++)
 		{
 			if (d[j] == n[i])
-			{
 				n[i] = g[j];
-			}
 		}
 	}
 	return (n);
