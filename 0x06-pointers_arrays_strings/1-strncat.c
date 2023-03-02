@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * *_strncat - similar to _strcat except uses nbytes for
+ * _strncat - similar to _strcat except uses nbytes for
  * source and src dores not need to be /0
  * @dest: destination for the copied string
  * @src: string to be copied
