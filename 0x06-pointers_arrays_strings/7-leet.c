@@ -13,7 +13,7 @@ char *leet(char *n);
 	char d[] = "aAeEoOtTlL";
 	char g[] = "4433007711";
 
-	for (i = 0; *(s + i); i++)
+	for (i = 0; *(n + i); i++)
 	{
 		for (j = 0; j < 10; j++)
 		{
