@@ -2,12 +2,12 @@
 
 /**
  * leet - function that encodes a string into 1337
- * @t: input value
+ * @s: input value
  *
  * Return: t value
  */
 
-char *leet(char *t);
+char *leet(char *t)
 {
 	int i, j;
 	char d[] = "aAeEoOtTlL";
