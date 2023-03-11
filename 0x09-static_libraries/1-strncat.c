@@ -1,39 +1,26 @@
 #include "main.h"
 
 /**
- * _strcat - appends the src string to the dest string, overwriting
- * the terminating null byte (\0) at the end of dest and adds '\0'
- * @dest: resulting string
- * @src: string to be concatinated to dest string
- *
- * Return: dest
+ * _strncat - similar to _strcat except uses nbytes for
+ * source and src dores not need to be /0
+ * @dest: destination for the copied string
+ * @src: string to be copied
+ * @n: number of bytes
+ * Return: Always 0.
  */
 
-char *_strcat(char *dest, char *src);
-/**
- * _strcat - appends the src string to the dest string, overwriting
- * the terminating null byte (\0) at the end of dest and adds '\0'
- * @dest: resulting string
- * @src: string to be concatinated to dest string
- *
- * Return: dest
- */
-
-char *_strcat(char *dest, char *src)
+char *_strncat(char *dest, char *src, int n)
 {
-	char *s = dest;
+	int i, j;
 
-	while (*dest != '\0')
+	for (i = 0; dest[i] != '\0'; i++)
 	{
-		dest++;
+		continue;
 	}
-	while (*src != '\0')
+	for (j = 0; src[j] != '\0' && j < n; j++)
 	{
-		*dest = *src;
-		dest++;
-		src++;
+		dest[i + j] = src[j];
 	}
-
-	*dest = '\0';
-	return (s);
+	dest[i + j] = '\0';
+	return (dest);
 }
