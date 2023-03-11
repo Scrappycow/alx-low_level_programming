@@ -12,32 +12,32 @@
 
 int main(int argc, char *argv[])
 {
-	int i, j;
+	int i, j, t;
 	int sum = 0;
 
-	if (argc < 2)
+	if (argc == 1)
 	{
 		printf("0\n");
 		return (0);
 	}
 	for (i = 1 ; i < argc; i++)
 	{
-		char *arg = argv[i];
-
-		for (j = 0; arg[j] != '\0'; j++)
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			if (!isdigit(arg[j]))
+			if (!isdigit(argv[i][j]))
 			{
 				printf("Error\n");
 				return (1);
 			}
 		}
-		int num = atoi(arg);
+		int t = atoi(argv[arg]);
 
-		if (num > 0)
+		if (t < 0)
 		{
-			sum += num;
+			printf("Error\n");
+			return (1);
 		}
+		sum += t;
 	}
 
 	printf("%d\n", sum);
