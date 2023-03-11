@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 				return (1);
 			}
 		}
-		int t = atoi(argv[arg]);
+		int t = atoi(argv[i]);
 
 		if (t < 0)
 		{
