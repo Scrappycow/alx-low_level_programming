@@ -12,7 +12,7 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	char new_str;
+	char *new_str;
 	int index;
 	int added;
 	int len = 0;
