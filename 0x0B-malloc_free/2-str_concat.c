@@ -12,34 +12,34 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	char *new_str;
-	unsigned int index, index2, k, limit;
+	char *strout;
+	unsigned int i, j, k, limit;
 
 	if (s1 == NULL)
-	{
 		s1 = "";
-	}
 	if (s2 == NULL)
-	{
 		s2 = "";
-	}
-	for (index = 0; s1[index] != '\0'; index++)
+
+	for (i = 0; s1[i] != '\0'; i++)
 		;
 
-	for (index2 = 0; s2[index2] != '\0'; index2++)
+	for (j = 0; s2[j] != '\0'; j++)
 		;
 
-	new_str = malloc(sizeof(char) * (index + index2 + 1));
+	strout = malloc(sizeof(char) * (i + j + 1));
 
-	if (new_str == NULL)
+	if (strout == NULL)
+	{
+		free(strout);
 		return (NULL);
+	}
 
-	for (k = 0; k < index; k++)
-		new_str[k] = s1[k];
+	for (k = 0; k < i; k++)
+		strout[k] = s1[k];
 
-	limit = index2;
-	for (index2 = 0; j <= limit; k++, j++)
-		new_str[k] = s2[index2];
+	limit = j;
+	for (j = 0; j <= limit; k++, j++)
+		strout[k] = s2[j];
 
-	return (new_str);
+	return (strout);
 }
