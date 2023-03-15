@@ -1,3 +1,24 @@
+#include "main.h"
+#include <stdlib.h>
+
+/**
+ * ch_free_grid - frees a 2 dimensional array.
+ * @grid: multidimensional array of char.
+ * @height: height of the array.
+ *
+ * Return: no return
+ */
+void ch_free_grid(char **grid, unsigned int height)
+{
+	if (grid != NULL && height != 0)
+	{
+		for (; height > 0; height--)
+			free(grid[height]);
+		free(grid[height]);
+		free(grid);
+	}
+}
+
 /**
  * strtow - splits a string into words.
  * @str: string.
@@ -6,7 +27,7 @@
  */
 char **strtow(char *str)
 {
-	char **sop;
+	char **aout;
 	unsigned int c, height, i, j, a1;
 
 	if (str == NULL || *str == '\0')
@@ -16,10 +37,10 @@ char **strtow(char *str)
 		if (str[c] != ' ' && (str[c + 1] == ' ' || str[c + 1] == '\0'))
 			height++;
 	}
-	sop = malloc((height + 1) * sizeof(char *));
-	if (sop == NULL || height == 0)
+	aout = malloc((height + 1) * sizeof(char *));
+	if (aout == NULL || height == 0)
 	{
-		free(sop);
+		free(aout);
 		return (NULL);
 	}
 	for (i = a1 = 0; i < height; i++)
@@ -30,19 +51,19 @@ char **strtow(char *str)
 				a1++;
 			if (str[c] != ' ' && (str[c + 1] == ' ' || str[c + 1] == '\0'))
 			{
-				sop[i] = malloc((c - a1 + 2) * sizeof(char));
-				if (sop[i] == NULL)
+				aout[i] = malloc((c - a1 + 2) * sizeof(char));
+				if (aout[i] == NULL)
 				{
-					ch_free_grid(sop, i);
+					ch_free_grid(aout, i);
 					return (NULL);
 				}
 				break;
 			}
 		}
 		for (j = 0; a1 <= c; a1++, j++)
-			sop[i][j] = str[a1];
-		sop[i][j] = '\0';
+			aout[i][j] = str[a1];
+		aout[i][j] = '\0';
 	}
-	sop[i] = NULL;
-	return (sop);
+	aout[i] = NULL;
+	return (aout);
 }
