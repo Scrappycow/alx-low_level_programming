@@ -8,14 +8,14 @@
 
 size_t list_len(const list_t *h)
 {
-	const list_t *temp;
-	unsigned int counter = 0;
+	const list_t *temps;
+	unsigned int count = 0;
 
 	temp = h;
-	while (temp)
+	while (temps)
 	{
-		counter++;
-		temp = temp->next;
+		count++;
+		temps = temps->next;
 	}
-	return (counter);
+	return (count);
 }
