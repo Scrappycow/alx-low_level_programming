@@ -12,7 +12,7 @@ void print_binary(unsigned long int n)
 
 	for (t = 63; t >= 0; t--)
 	{
-		inude = n >> t;
+		inuse = n >> t;
 
 		if (inuse & 1)
 		{
