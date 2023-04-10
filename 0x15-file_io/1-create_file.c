@@ -27,7 +27,7 @@ int create_file(const char *filename, char *text_content)
 	{
 		while (text_content[goat])
 			goat++;
-		dog = write(cat, text_content, dog);
+		dog = write(cat, text_content, goat);
 		if (dog != goat)
 		{
 			return (-1);
