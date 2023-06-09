@@ -1,4 +1,3 @@
->>>>>>> c99051d4262a1d008e19bcead541dd60819eea13
 #include "hash_tables.h"
 /**
  * hash_table_get - retrieves a value associated with a certain key.
