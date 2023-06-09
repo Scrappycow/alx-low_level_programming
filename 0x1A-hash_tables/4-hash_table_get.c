@@ -27,4 +27,3 @@ while (node != NULL)
 }
 return (NULL);
 }
->>>>>>> c99051d4262a1d008e19bcead541dd60819eea13
