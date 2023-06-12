@@ -1,4 +1,4 @@
-include "hash_tables.h"
+#include "hash_tables.h"
 
 hash_node_t *create_new_node(const char *key, const char *value);
 
@@ -57,7 +57,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
  * @key: is the key. Not an empty string
  * @value: value associated with the key.
  * value must be duplicated. value can be an empty string
- * Return: 1 on success, 0 on failurre
+ * Return: 1 on success, 0 on failure
  */
 
 hash_node_t *create_new_node(const char *key, const char *value)
