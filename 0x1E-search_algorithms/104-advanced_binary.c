@@ -1,7 +1,7 @@
 #include "search_algos.h"
 
 /**
- * recursive_search - searches for a value in an array of
+ * rec_search - searches for a value in an array of
  * integers using Binary search algorithm
  *
  *
@@ -10,7 +10,7 @@
  * @value: value to search in
  * Return: index of the number
  */
-int recursive_search(int *array, size_t size, int value)
+int rec_search(int *array, size_t size, int value)
 {
 	size_t half = size / 2;
 	size_t i;
@@ -29,30 +29,33 @@ int recursive_search(int *array, size_t size, int value)
 		half--;
 
 	if (value == array[half])
+	{
+		if (half > 0)
+			return (rec_search(array, half + 1, value));
 		return ((int)half);
+	}
 
 	if (value < array[half])
-		return (recursive_search(array, half, value));
+		return (rec_search(array, half + 1, value));
 
 	half++;
-
-	return (recursive_search(array + half, size - half, value) + half);
+	return (rec_search(array + half, size - half, value) + half);
 }
 
 /**
- * binary_search - calls to binary_search to return
- * the index of number
+ * advanced_binary - calls to rec_search to return
+ * index of the number
  *
  * @array: input array
  * @size: size of the array
  * @value: value to search in
  * Return: index of the number
  */
-int binary_search(int *array, size_t size, int value)
+int advanced_binary(int *array, size_t size, int value)
 {
 	int index;
 
-	index = recursive_search(array, size, value);
+	index = rec_search(array, size, value);
 
 	if (index >= 0 && array[index] != value)
 		return (-1);
